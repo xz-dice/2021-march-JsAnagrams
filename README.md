@@ -1,2 +1,2 @@
-# year-cohort-projectName
-project template repo
+2021 March Cohort - Mountain Goats team
+JavaScript anagram game
