@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+main {
+    margin: 50px;
+}
+h2 {
+    text-align: center;
+    font-family: 'Patua One', serif;
+    font-size: 4rem;
+}
+
+
+.instructionMain {
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.gameNav {
+    display: flex;
+    justify-content: space-evenly;
+}
