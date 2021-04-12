@@ -1,5 +1,5 @@
-fetch('countryData.json')
-    .then(response => countryData.json())
+fetch('countries.json')
+    .then(countryData => countryData.json())
     .then(data => {
         console.log(data)
-    })})
+    })
