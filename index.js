@@ -1,12 +1,12 @@
+let countries = []
+
 fetch('countries.json')
     .then(countryData => countryData.json())
     .then(data => {
-        console.log(data)
-
+        countries = data
+        document.getElementById('startButton').addEventListener('click', () => {
+            startGame()
+            //displayCountry(countries)
+        })
     })
 
-
-document.getElementById('startButton').addEventListener('click', () => {
-    startGame()
-    //displayCountry(countries)
-})
