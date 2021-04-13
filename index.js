@@ -16,6 +16,8 @@ document.getElementById('startButton').addEventListener('click', () => {
     if(countries.length > 0)
     {
         startGame()
-        //displayCountry(countries)
+        let countryObject = getRandomCountry(countries)
+        countryObject = formatCountry(countryObject)
+        displayCountry(countryObject)
     }
 })
