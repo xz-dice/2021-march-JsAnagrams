@@ -13,6 +13,11 @@ const getRandomCountry = (countries) => {
 //split the random country into individual characters
 let country = {name: 'India', code: 'IN'};
 
+/**
+ * function to add a new property to a country object containing a lowercase anagram of the country name
+ * @param country object containing a country name & country code
+ * @returns {object} a country object containing a lowercase anagram of the country name
+ */
 let formatCountry = (country) => {
     country.anagram = country.name
     let lowercaseSplitCountry = country.anagram.toLowerCase().split('');
