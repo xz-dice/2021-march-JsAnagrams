@@ -16,6 +16,7 @@ const getRandomCountry = (countries) => {
     const randomIndex = Math.floor(Math.random() * countries.length)
     return countries.splice(randomIndex, 1)[0]
 }
+
 /**
  * function to add a new property to a country object containing a lowercase anagram of the country name
  * @param country object containing a country name & country code
@@ -62,3 +63,17 @@ const getAndDisplayCountry = countries => {
     displayCountry(countryObject)
     return countryObject
 }
+
+
+/**
+ * function to disable text input
+ */
+
+// we need to stop default functionality of the text input once reveal is selected
+document.getElementById('reveal').addEventListener('click', (e) => {
+    e.preventDefault()
+    document.getElementById('text').disabled = true
+}
+
+// we need to stop default functionality when answer is correct
+
