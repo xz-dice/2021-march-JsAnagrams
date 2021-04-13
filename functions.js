@@ -6,5 +6,5 @@
  */
 const getRandomCountry = (countries) => {
     const randomIndex = Math.floor(Math.random() * countries.length)
-     return countries.splice(randomIndex, 1)[0]
+    return countries.splice(randomIndex, 1)[0]
 }
