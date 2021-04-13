@@ -1,4 +1,13 @@
 /**
+ * function to display anagram and country code to front end
+ * @param {object} countryObject containing anagram and code properties
+ */
+displayCountry = (countryObject) => {
+    document.getElementById('anagram').textContent = countryObject.anagram
+    document.getElementById('hint').textContent = countryObject.code
+}
+
+/**
  * function to get random country object from the array
  * removing that country from the array
  * @param countries array of country objects
@@ -8,7 +17,6 @@ const getRandomCountry = (countries) => {
     const randomIndex = Math.floor(Math.random() * countries.length)
     return countries.splice(randomIndex, 1)[0]
 }
-
 /**
  * function to add a new property to a country object containing a lowercase anagram of the country name
  * @param country object containing a country name & country code
@@ -30,3 +38,4 @@ let formatCountry = (country) => {
 
     return country
 }
+
