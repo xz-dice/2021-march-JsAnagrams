@@ -6,4 +6,5 @@ fetch('countries.json')
 
 
 
+
 document.getElementById('test').addEventListener('click',startGame)
