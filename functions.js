@@ -1,13 +1,10 @@
 
-//hides the main menu and begins the game.
+//hides the main menu and shows the main game screen.
 const startGame = () => {
     document.getElementById('instructionScreen').style.display = 'none'
     document.getElementById('mainScreen').style.display = 'block'
 }
 
-//let randomCountry = getRandomCountry()
-//let formattedCountry = formatCountry(randomCountry)
-//displayCountry(randomCountry)
 
 /**
  * function to get random country object from the array
