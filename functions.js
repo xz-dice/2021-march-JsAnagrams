@@ -9,10 +9,6 @@ const getRandomCountry = (countries) => {
     return countries.splice(randomIndex, 1)[0]
 }
 
-
-//split the random country into individual characters
-let country = {name: 'India', code: 'IN'};
-
 /**
  * function to add a new property to a country object containing a lowercase anagram of the country name
  * @param country object containing a country name & country code
@@ -20,20 +16,17 @@ let country = {name: 'India', code: 'IN'};
  */
 let formatCountry = (country) => {
     country.anagram = country.name
-    let lowercaseSplitCountry = country.anagram.toLowerCase().split('');
+    let lowercaseSplitCountry = country.anagram.toLowerCase().split('')
 
     // Shuffling array
     for (let currentIndex = lowercaseSplitCountry.length - 1; currentIndex > 0; currentIndex--) {
-        let randomIndex = Math.floor(Math.random() * (currentIndex + 1));
-        let tempValue = lowercaseSplitCountry[currentIndex];
-        lowercaseSplitCountry[currentIndex] = lowercaseSplitCountry[randomIndex];
-        lowercaseSplitCountry[randomIndex] = tempValue;
+        let randomIndex = Math.floor(Math.random() * (currentIndex + 1))
+        let tempValue = lowercaseSplitCountry[currentIndex]
+        lowercaseSplitCountry[currentIndex] = lowercaseSplitCountry[randomIndex]
+        lowercaseSplitCountry[randomIndex] = tempValue
     }
 
     country.anagram = lowercaseSplitCountry.join('')
 
     return country
 }
-
-console.log(country)
-console.log(formatCountry(country));
