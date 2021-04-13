@@ -15,13 +15,16 @@ let country = 'India';
 
 let formatCountry = () => {
     let lowercaseSplitCountry = country.toLowerCase().split('');
-        for (let i = lowercaseSplitCountry.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            let temp = lowercaseSplitCountry[i];
-            lowercaseSplitCountry[i] = lowercaseSplitCountry[j];
-            lowercaseSplitCountry[j] = temp;
-        }
-        return lowercaseSplitCountry.join()
+
+    // Shuffling array
+    for (let currentIndex = lowercaseSplitCountry.length - 1; currentIndex > 0; currentIndex--) {
+        let randomIndex = Math.floor(Math.random() * (currentIndex + 1));
+        let tempValue = lowercaseSplitCountry[currentIndex];
+        lowercaseSplitCountry[currentIndex] = lowercaseSplitCountry[randomIndex];
+        lowercaseSplitCountry[randomIndex] = tempValue;
+    }
+    
+    return lowercaseSplitCountry.join()
 }
 
 console.log(formatCountry());
