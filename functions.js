@@ -1,24 +1,11 @@
-// remove once code reviewed
-const testObjectForCodeReview = {
-    name: 'England',
-    code: 'ENG',
-    anagram: 'nldegan'
-}
 /**
- * function to get display country anagram and country code to html
- * @param countryObject
+ * function to display anagram and country code to front end
+ * @param {object} countryObject containing anagram and code properties
  */
-function displayCountry(countryObject) {
+displayCountry = (countryObject) => {
     document.getElementById('anagram').textContent = countryObject.anagram
     document.getElementById('hint').textContent = countryObject.code
 }
-
-// remove once code reviewed
-displayCountry(testObjectForCodeReview)
-
-// remove once code reviewed
-console.log(testObjectForCodeReview.code)
-
 
 /**
  * function to get random country object from the array
