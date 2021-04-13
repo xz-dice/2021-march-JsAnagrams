@@ -62,3 +62,7 @@ const getAndDisplayCountry = countries => {
     displayCountry(countryObject)
     return countryObject
 }
+
+const newWord = (countries) => {
+    getAndDisplayCountry(countries)
+}

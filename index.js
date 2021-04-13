@@ -12,3 +12,8 @@ document.getElementById('startButton').addEventListener('click', () => {
         getAndDisplayCountry(countries)
     }
 })
+
+document.getElementById('nextButton').addEventListener('click', (e) => {
+    e.preventDefault()
+    newWord()
+})
