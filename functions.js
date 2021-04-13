@@ -11,10 +11,11 @@ const getRandomCountry = (countries) => {
 
 
 //split the random country into individual characters
-let country = 'India';
+let country = {name: 'India', code: 'IN'};
 
-let formatCountry = () => {
-    let lowercaseSplitCountry = country.toLowerCase().split('');
+let formatCountry = (country) => {
+    country.anagram = country.name
+    let lowercaseSplitCountry = country.anagram.toLowerCase().split('');
 
     // Shuffling array
     for (let currentIndex = lowercaseSplitCountry.length - 1; currentIndex > 0; currentIndex--) {
@@ -23,8 +24,11 @@ let formatCountry = () => {
         lowercaseSplitCountry[currentIndex] = lowercaseSplitCountry[randomIndex];
         lowercaseSplitCountry[randomIndex] = tempValue;
     }
-    
-    return lowercaseSplitCountry.join()
+
+    country.anagram = lowercaseSplitCountry.join()
+
+    return country
 }
 
-console.log(formatCountry());
+console.log(country)
+console.log(formatCountry(country));
