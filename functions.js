@@ -4,7 +4,10 @@ const testObjectForCodeReview = {
     code: 'ENG',
     anagram: 'nldegan'
 }
-
+/**
+ * function to get display country anagram and country code to html
+ * @param countryObject
+ */
 function displayCountry(countryObject) {
     document.getElementById('anagram').textContent = countryObject.anagram
     document.getElementById('hint').textContent = countryObject.code
@@ -15,6 +18,7 @@ displayCountry(testObjectForCodeReview)
 
 // remove once code reviewed
 console.log(testObjectForCodeReview.code)
+
 
 /**
  * function to get random country object from the array
