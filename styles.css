@@ -24,7 +24,6 @@ h2 {
     font-size: 4rem;
 }
 
-
 .instructionMain {
     display: flex;
     align-items: center;
@@ -40,6 +39,10 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+#mainScreen {
+    display: none;
 }
 
 .mainGame {

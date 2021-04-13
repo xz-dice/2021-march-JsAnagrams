@@ -1,10 +1,7 @@
-/**
- * function to display anagram and country code to front end
- * @param {object} countryObject containing anagram and code properties
- */
-displayCountry = (countryObject) => {
-    document.getElementById('anagram').textContent = countryObject.anagram
-    document.getElementById('hint').textContent = countryObject.code
+//hides the main menu and shows the main game screen.
+const startGame = () => {
+    document.getElementById('instructionScreen').style.display = 'none'
+    document.getElementById('mainScreen').style.display = 'block'
 }
 
 /**
@@ -39,3 +36,27 @@ let formatCountry = (country) => {
     return country
 }
 
+/**
+ * function to display anagram and country code to front end
+ * @param {object} countryObject containing anagram and code properties
+ */
+displayCountry = (countryObject) => {
+    document.getElementById('anagram').textContent = countryObject.anagram
+    document.getElementById('hint').textContent = countryObject.code
+}
+
+/**
+ * function to get random country object from the array,
+ * add the anagram property to the country object,
+ * then display that country to the web page, and
+ * finally return the country object
+ *
+ * @param countries array of country objects
+ * @returns {object} the randomly selected country object with the anagram property attached to it
+ */
+const getAndDisplayCountry = countries => {
+    let countryObject = getRandomCountry(countries)
+    countryObject = formatCountry(countryObject)
+    displayCountry(countryObject)
+    return countryObject
+}
