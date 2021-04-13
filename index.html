@@ -2,12 +2,51 @@
 <html lang="en-GB">
     <head>
         <title>Scrumble</title>
+        <meta charset="UTF-8" />
         <link href="normalize.css" rel="stylesheet" type="text/css" />
         <link href="styles.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
         <script src="functions.js" defer></script>
         <script src="index.js" defer></script>
     </head>
     <body>
+        <main>
+            <h2>SCRUMBLE</h2>
 
+            <section id="instructionScreen">
+                <div class="instructionMain">
+                    <div class="writtenInstructions">
+                    <h3>Instructions</h3>
+                    <p>Correctly guess as many anagrams of countries of the world as possible. </p>
+                    <ul>
+                        <li>On the following page, an anagram will appear and you must enter your answer in the text field below. </li>
+                        <li>If you need a hint, then hover over the HINT box and the two letter country code will appear. </li>
+                        <li>Once you feel ready, press START and you will be taken to the following screen where the game will start immediately. </li>
+                    </ul>
+                    </div>
+                        <img src="assets/globe.png" alt="globe" />
+                </div>
+                <div class="buttons">
+                     <button id="startButton">Start Game</button>
+                </div>
+            </section>
+
+            <section id="mainScreen">
+                <div class="mainGame">
+                    <div class="anagramInput">
+                        <h1 id="anagram">YRGANEM</h1>
+                        <div id="textInput">
+                            <input type="text"/><span class="material-icons" id="cross">cancel</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div id="hint">Hover for a Hint</div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
     </body>
 </html>
