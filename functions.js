@@ -30,7 +30,7 @@ let formatCountry = (country) => {
         lowercaseSplitCountry[randomIndex] = tempValue;
     }
 
-    country.anagram = lowercaseSplitCountry.join()
+    country.anagram = lowercaseSplitCountry.join('')
 
     return country
 }
