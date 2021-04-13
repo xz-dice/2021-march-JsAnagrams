@@ -6,9 +6,18 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
+
 main {
     margin: 50px;
 }
+
+.writtenInstructions {
+    background-color: #7ABC31;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+}
+
 h2 {
     text-align: center;
     font-family: 'Patua One', serif;
@@ -24,10 +33,65 @@ h2 {
 .buttons {
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 
 .gameNav {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.mainGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.anagramInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+}
+
+input {
+    margin: 10px;
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+}
+
+/*#instructionScreen {*/
+/*    display: none;*/
+/*}*/
+
+h1 {
+    font-size: 3.5rem;
+}
+
+#hint {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #E2CBFF;
+}
+
+#cross {
+    color: red;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+}
+
+#startButton {
+    width: 400px;
+    height: 50px;
+    background-color: #7ABC31;
+    color: #fff;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
 }

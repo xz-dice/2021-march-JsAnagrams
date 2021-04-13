@@ -2,10 +2,12 @@
 <html lang="en-GB">
     <head>
         <title>Scrumble</title>
+        <meta charset="UTF-8" />
         <link href="normalize.css" rel="stylesheet" type="text/css" />
         <link href="styles.css" rel="stylesheet" type="text/css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
         <script src="functions.js" defer></script>
         <script src="index.js" defer></script>
     </head>
@@ -13,19 +15,14 @@
         <main>
             <h2>SCRUMBLE</h2>
 
-            <section id="instructions">
+            <section id="instructionScreen">
                 <div class="instructionMain">
-                    <div>
+                    <div class="writtenInstructions">
                     <h3>Instructions</h3>
-                    <p>You have 30 seconds to correctly guess as many anagrams of countries of the world as possible. </p>
+                    <p>Correctly guess as many anagrams of countries of the world as possible. </p>
                     <ul>
                         <li>On the following page, an anagram will appear and you must enter your answer in the text field below. </li>
-                        <li>For every correct answer, your score will increase by one.</li>
-                        <li>If your answer is correct, a green tick will appear and you can click NEXT to move onto the next anagram. </li>
                         <li>If you need a hint, then hover over the HINT box and the two letter country code will appear. </li>
-                        <li>If you want to reveal he answer, then you can click the REVEAL button which will reveal the answer and then you can click NEXT to move onto the next anagram. </li>
-                        <li>If you get off to a bad start, you can click the RESTART button at the top of the page. </li>
-                        <li>Once time is up, you will be shown your final score and have the option to replay the game. </li>
                         <li>Once you feel ready, press START and you will be taken to the following screen where the game will start immediately. </li>
                     </ul>
                     </div>
@@ -38,15 +35,19 @@
                 </div>
             </section>
 
-            <section id="main-board">
+            <section id="mainScreen">
                 <div class="gameNav">
-                    <h3>Timer:<span id="timer">0</span></h3>
-                    <h3>Score:<span id="score">0</span></h3>
-                    <button id="restartButton">Restart</button>
                 </div>
                 <div class="mainGame">
-                    <h1 id="anagram">DINIA</h1>
-                    
+                    <div class="anagramInput">
+                        <h1 id="anagram">YRGANEM</h1>
+                        <div id="textInput">
+                            <input type="text"/><span class="material-icons" id="cross">cancel</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div id="hint">Hover for a Hint</div>
+                    </div>
                 </div>
 
             </section>
