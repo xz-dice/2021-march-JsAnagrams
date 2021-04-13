@@ -1,5 +1,6 @@
-// fetch('countryData.json')
-//     .then(response => countryData.json())
-//     .then(data => {
-//         console.log(data)
-//     })})
+fetch('countries.json')
+    .then(countryData => countryData.json())
+    .then(data => {
+        console.log(data)
+    })
+
