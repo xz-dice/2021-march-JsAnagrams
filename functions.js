@@ -1,4 +1,6 @@
-//hides the main menu and shows the main game screen.
+/**
+ * function to get start game by hiding instructions screen & revealing main screen
+ */
 const startGame = () => {
     document.getElementById('instructionScreen').style.display = 'none'
     document.getElementById('mainScreen').style.display = 'block'
@@ -19,7 +21,7 @@ const getRandomCountry = (countries) => {
  * @param country object containing a country name & country code
  * @returns {object} a country object containing a lowercase anagram of the country name
  */
-let formatCountry = (country) => {
+const formatCountry = (country) => {
     country.anagram = country.name
     let lowercaseSplitCountry = country.anagram.toLowerCase().split('')
 
@@ -40,7 +42,7 @@ let formatCountry = (country) => {
  * function to display anagram and country code to front end
  * @param {object} countryObject containing anagram and code properties
  */
-displayCountry = (countryObject) => {
+const displayCountry = (countryObject) => {
     document.getElementById('anagram').textContent = countryObject.anagram
     document.getElementById('hint').textContent = countryObject.code
 }

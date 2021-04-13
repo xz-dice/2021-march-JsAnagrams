@@ -7,8 +7,7 @@ fetch('countries.json')
     })
 
 document.getElementById('startButton').addEventListener('click', () => {
-    if(countries.length > 0)
-    {
+    if (countries.length) {
         startGame()
         getAndDisplayCountry(countries)
     }
