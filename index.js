@@ -1,5 +1,6 @@
 let countries = []
 let country
+let score = 0
 
 fetch('countries.json')
     .then(countryData => countryData.json())
@@ -15,7 +16,15 @@ document.getElementById('startButton').addEventListener('click', () => {
 })
 
 document.getElementById('text').addEventListener('keyup', e => {
-    displayCheckCorrect(checkCorrect(country))
+    let correctWord = checkCorrect(country)
+    displayCheckCorrect(correctWord)
+    if (correctWord) {
+        score = incrementScore(score)
+        displayUpdatedScore(score)
+        if (score % 5 === 0 ) {
+            partyMode()
+        }
+    }
 })
 
 document.getElementById('revealButton').addEventListener('click', () => {
@@ -27,3 +36,4 @@ document.getElementById('revealButton').addEventListener('click', () => {
 document.getElementById('nextButton').addEventListener('click', () => {
     country = newWord(countries)
 })
+
