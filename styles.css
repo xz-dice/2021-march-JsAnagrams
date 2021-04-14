@@ -29,9 +29,13 @@ h2 {
     align-items: center;
 }
 
-.buttons {
+.startButtonContainer {
     display: flex;
     justify-content: space-evenly;
+}
+
+button {
+    cursor: pointer;
 }
 
 .buttonContainer {
@@ -51,6 +55,7 @@ h2 {
 
 .buttonContainer > button:disabled {
     background-color: #d3d3d3;
+    cursor: auto;
 }
 
 .gameNav {
