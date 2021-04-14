@@ -85,7 +85,7 @@ const newWord = (countries) => {
  * @return bool if input = country.name
  */
 const checkCorrect = (country) => {
-    let input = document.getElementById("text").value.toLowerCase()
+    let input = document.getElementById('text').value.toLowerCase()
     let lowercaseCountry = country.name
     lowercaseCountry = lowercaseCountry.toLowerCase()
     return (input === lowercaseCountry)
