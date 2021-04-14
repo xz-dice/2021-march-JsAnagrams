@@ -64,7 +64,6 @@ const getAndDisplayCountry = countries => {
     return countryObject
 }
 
-
 /**
  * function to disable text input
  * default functionality disables text input
@@ -73,4 +72,11 @@ const getAndDisplayCountry = countries => {
 
 const disableTextInput = (boolean= true) => {
     document.getElementById('text').disabled = boolean
+}
+/**
+ * function to enable or disable the next button
+ * @param {boolean} enabled if true the next button is enabled otherwise disabled
+ */
+const enableNewWordButton = (enabled) => {
+    document.getElementById('nextButton').disabled = !enabled
 }
