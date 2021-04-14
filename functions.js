@@ -125,3 +125,14 @@ const enableTextInput = (enabled= true) => {
 const enableNextButton = (enabled = true) => {
     document.getElementById('nextButton').disabled = !enabled
 }
+
+// could call checkCorrect function
+// if true, score++
+
+const incrementScore = (correctWord, score) => {
+    if (correctWord) {
+        score.score++
+    }
+}
+
+

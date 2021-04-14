@@ -1,6 +1,9 @@
 let countries = []
 let country
-let score = 0
+let score = {
+score: 0
+}
+console.log(score)
 
 fetch('countries.json')
     .then(countryData => countryData.json())
@@ -16,7 +19,9 @@ document.getElementById('startButton').addEventListener('click', () => {
 })
 
 document.getElementById('text').addEventListener('keyup', e => {
-    displayCheckCorrect(checkCorrect(country))
+    let correctWord = checkCorrect(country)
+    displayCheckCorrect(correctWord)
+    incrementScore(correctWord, score)
 })
 
 document.getElementById('revealButton').addEventListener('click', () => {
