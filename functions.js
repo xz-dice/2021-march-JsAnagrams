@@ -143,3 +143,14 @@ const incrementScore = (score) => {
 const displayUpdatedScore = (score) => {
     document.getElementById('score').textContent = score
 }
+
+const partyMode = (score) => {
+        document.getElementById('score').style.color = 'blue'
+        document.getElementById('score').style.fontSize = '2.5rem'
+        setTimeout(() => {
+            document.getElementById('score').style.color = 'black'
+            document.getElementById('score').style.fontSize = '1.5rem'
+            console.log('hello')
+    }, 1000)
+}
+
