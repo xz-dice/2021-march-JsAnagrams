@@ -16,6 +16,7 @@ const getRandomCountry = (countries) => {
     const randomIndex = Math.floor(Math.random() * countries.length)
     return countries.splice(randomIndex, 1)[0]
 }
+
 /**
  * function to add a new property to a country object containing a lowercase anagram of the country name
  * @param country object containing a country name & country code
@@ -74,4 +75,21 @@ const newWord = (countries) => {
     enableNewWordButton(false)
     disableTextInput(false)
     return getAndDisplayCountry(countries)
+}
+
+/**
+ * function to disable text input
+ * default functionality disables text input
+ * @param {boolean} boolean if true, disables text input and if false enables text input
+ */
+const disableTextInput = (boolean= true) => {
+    document.getElementById('text').disabled = boolean
+}
+
+/**
+ * function to enable or disable the next button
+ * @param {boolean} enabled if true the next button is enabled otherwise disabled
+ */
+const enableNewWordButton = (enabled) => {
+    document.getElementById('nextButton').disabled = !enabled
 }
