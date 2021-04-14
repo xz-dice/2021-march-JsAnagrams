@@ -159,3 +159,10 @@ const partyMode = () => {
     }, 3000)
 }
 
+const startTimer = () => {
+    timer = 30
+    setInterval(()=> {
+        timer--
+
+    }, 1000)
+}
