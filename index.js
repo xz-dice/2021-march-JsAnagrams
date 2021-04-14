@@ -9,11 +9,11 @@ fetch('countries.json')
 document.getElementById('startButton').addEventListener('click', () => {
     if (countries.length) {
         startGame()
-        getAndDisplayCountry(countries)
+        newWord(countries)
     }
 })
 
 document.getElementById('nextButton').addEventListener('click', (e) => {
     e.preventDefault()
-    newWord()
+    newWord(countries)
 })
