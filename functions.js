@@ -63,8 +63,15 @@ const getAndDisplayCountry = countries => {
     return countryObject
 }
 
+/**
+ * function to overwrite main game screen display with next word
+ * while also re-enabling the input & disabling the next button
+ *
+ * @param {array} countries array of country objects
+ * @returns {object} the next randomly selected country object with the anagram property attached to it
+ */
 const newWord = (countries) => {
-    getAndDisplayCountry(countries)
     document.getElementById('nextButton').disabled = true
     document.querySelector('#textInput input').disabled = false
+    return getAndDisplayCountry(countries)
 }
