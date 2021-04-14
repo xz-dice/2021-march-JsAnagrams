@@ -70,3 +70,4 @@ const getAndDisplayCountry = countries => {
 const enableNewWordButton = (enabled) => {
     document.getElementById('nextButton').disabled = !enabled
 }
+
