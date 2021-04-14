@@ -16,6 +16,7 @@ const getRandomCountry = (countries) => {
     const randomIndex = Math.floor(Math.random() * countries.length)
     return countries.splice(randomIndex, 1)[0]
 }
+
 /**
  * function to add a new property to a country object containing a lowercase anagram of the country name
  * @param country object containing a country name & country code
@@ -62,3 +63,33 @@ const getAndDisplayCountry = countries => {
     displayCountry(countryObject)
     return countryObject
 }
+
+//Add an event listener to input box that listens for keyup
+//When keyup registered conditional statement triggered (if input = countryName.name then use innerHTML to show 'tick')
+
+/**
+ * function to check user input against original country name, changing both to lower case
+ *
+ * @param {object} country containing name property
+ *
+ * @return bool if input = country.name
+ */
+const checkCorrect = (country) => {
+    let input = document.getElementById("textInput").value.toLowerCase()
+    country.name = country.name.toLowerCase()
+    return (input === country.name)
+}
+
+/**
+ * function to change display from red cross to green tick if checkCorrect is true
+ *
+ * @param checkCorrect which if true will trigger function
+ */
+const displayCheckCorrect = (checkCorrect) => {
+    if (checkCorrect) {
+        document.getElementById('cross').textContent = 'check_circle'
+        document.getElementById('cross').style.color = 'green'
+    }
+}
+
+
