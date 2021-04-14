@@ -149,10 +149,8 @@ const displayUpdatedScore = (score) => {
 
 /**
  * function to initiate party mode!!!! :)
- *
- * @param {number} score the player's score
  */
-const partyMode = (score) => {
+const partyMode = () => {
         document.getElementById('score').style.color = 'blue'
         document.getElementById('score').style.fontSize = '2.5rem'
         setTimeout(() => {
