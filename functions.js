@@ -73,7 +73,7 @@ const getAndDisplayCountry = countries => {
 document.getElementById('reveal').addEventListener('click', (e) => {
     e.preventDefault()
     document.getElementById('text').disabled = true
-}
+})
 
 // we need to stop default functionality when answer is correct
 
