@@ -73,6 +73,8 @@ const getAndDisplayCountry = countries => {
  */
 const newWord = (countries) => {
     document.getElementById('text').value = ''
+    document.getElementById('cross').textContent = 'cancel'
+    document.getElementById('cross').style.color = 'red'
     enableNextButton(false)
     enableTextInput(true)
     return getAndDisplayCountry(countries)
