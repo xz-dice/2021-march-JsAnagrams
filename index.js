@@ -22,7 +22,7 @@ document.getElementById('text').addEventListener('keyup', e => {
         score = incrementScore(score)
         displayUpdatedScore(score)
         if (score % 5 === 0 ) {
-            partyMode(score)
+            partyMode()
         }
     }
 })
