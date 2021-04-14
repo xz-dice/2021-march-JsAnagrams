@@ -12,3 +12,8 @@ document.getElementById('startButton').addEventListener('click', () => {
         getAndDisplayCountry(countries)
     }
 })
+
+document.getElementById('reveal').addEventListener('click', (e) => {
+    e.preventDefault()
+    disableTextInput()
+})

@@ -67,17 +67,10 @@ const getAndDisplayCountry = countries => {
 
 /**
  * function to disable text input
+ * default functionality disables text input
+ * @param {boolean} if true, disables text input and if false enables text input
  */
 
-// we need to stop default functionality of the text input once reveal is selected
-document.getElementById('reveal').addEventListener('click', (e) => {
-    e.preventDefault()
-    disableTextInput()
-})
-
-// we need to stop default functionality when answer is correct
-
-const disableTextInput = () => {
-    document.getElementById('text').disabled = true
+const disableTextInput = (boolean= true) => {
+    document.getElementById('text').disabled = boolean
 }
-
