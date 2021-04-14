@@ -1,5 +1,6 @@
 let countries = []
 let country
+let score = 0
 
 fetch('countries.json')
     .then(countryData => countryData.json())
