@@ -16,7 +16,12 @@ document.getElementById('startButton').addEventListener('click', () => {
 })
 
 document.getElementById('text').addEventListener('keyup', e => {
-    displayCheckCorrect(checkCorrect(country))
+    let correctWord = checkCorrect(country)
+    displayCheckCorrect(correctWord)
+    if (correctWord) {
+        score = incrementScore(score)
+        displayUpdatedScore(score)
+    }
 })
 
 document.getElementById('revealButton').addEventListener('click', () => {
