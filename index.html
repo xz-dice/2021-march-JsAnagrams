@@ -23,12 +23,13 @@
                     <ul>
                         <li>On the following page, an anagram will appear and you must enter your answer in the text field below. </li>
                         <li>To help you out, the two letter country code will be displayed below. </li>
+                        <li>If you want to reveal the answer, then you can click the REVEAL button which will reveal the answer and then you can click NEXT to move onto the next anagram.  </li>
                         <li>Once you feel ready, press START and you will be taken to the following screen where the game will start immediately. </li>
                     </ul>
                     </div>
                         <img src="assets/globe.png" alt="globe" />
                 </div>
-                <div class="buttons">
+                <div class="startButtonContainer">
                      <button id="startButton">Start Game</button>
                 </div>
             </section>
@@ -38,11 +39,19 @@
                     <div class="anagramInput">
                         <h1 id="anagram">YRGANEM</h1>
                         <div id="textInput">
-                            <input type="text"/><span class="material-icons" id="cross">cancel</span>
+                            <input id="text" type="text"/><span class="material-icons" id="cross">cancel</span>
                         </div>
                     </div>
-                    <div id="hintButton" >
-                        <p id="hint"></p>
+                    <div class="buttonContainer">
+                        <button id="revealButton">
+                            Reveal
+                        </button>
+                        <div id="hintButton">
+                            <p id="hint"></p>
+                        </div>
+                        <button id="nextButton" disabled>
+                            Next
+                        </button>
                     </div>
                 </div>
 

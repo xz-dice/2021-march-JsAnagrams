@@ -16,6 +16,7 @@ const getRandomCountry = (countries) => {
     const randomIndex = Math.floor(Math.random() * countries.length)
     return countries.splice(randomIndex, 1)[0]
 }
+
 /**
  * function to add a new property to a country object containing a lowercase anagram of the country name
  * @param country object containing a country name & country code
@@ -61,4 +62,66 @@ const getAndDisplayCountry = countries => {
     countryObject = formatCountry(countryObject)
     displayCountry(countryObject)
     return countryObject
+}
+
+/**
+ * function to overwrite main game screen display with next word
+ * while also re-enabling the input & disabling the next button
+ *
+ * @param {array} countries array of country objects
+ * @returns {object} the next randomly selected country object with the anagram property attached to it
+ */
+const newWord = (countries) => {
+    document.getElementById('text').value = ''
+    document.getElementById('cross').textContent = 'cancel'
+    document.getElementById('cross').style.color = 'red'
+    enableNextButton(false)
+    enableTextInput(true)
+    return getAndDisplayCountry(countries)
+}
+
+/**
+ * function to check user input against original country name, changing both to lower case
+ *
+ * @param {object} country containing name property
+ *
+ * @return bool if input = country.name
+ */
+const checkCorrect = (country) => {
+    let input = document.getElementById('text').value.toLowerCase()
+    let lowercaseCountry = country.name
+    lowercaseCountry = lowercaseCountry.toLowerCase()
+    return (input === lowercaseCountry)
+}
+
+/**
+ * function to change display from red cross to green tick if checkCorrect is true
+ *
+ * @param checkCorrect which if true will trigger function
+ */
+const displayCheckCorrect = (checkCorrect) => {
+    if (checkCorrect) {
+        document.getElementById('cross').textContent = 'check_circle'
+        document.getElementById('cross').style.color = 'green'
+        enableTextInput(false)
+        enableNextButton(true)
+    }
+}
+
+/**
+ * function to disable text input,
+ * default functionality enables text input
+ * @param {boolean} boolean if true, enables text input and if false disables text input
+ */
+const enableTextInput = (enabled= true) => {
+    document.getElementById('text').disabled = !enabled
+}
+
+/**
+ * function to enable or disable the next button,
+ * default functionality enables the button
+ * @param {boolean} enabled if true the next button is enabled otherwise disabled
+ */
+const enableNextButton = (enabled = true) => {
+    document.getElementById('nextButton').disabled = !enabled
 }
