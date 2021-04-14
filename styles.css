@@ -34,6 +34,24 @@ h2 {
     justify-content: space-evenly;
 }
 
+.buttonContainer {
+    width : 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonContainer > button {
+    padding: 8px 16px;
+    background-color: #1D95EC;
+    color: #fff;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.buttonContainer > button:disabled {
+    background-color: #d3d3d3;
+}
 
 .gameNav {
     display: flex;

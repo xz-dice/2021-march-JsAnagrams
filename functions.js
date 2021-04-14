@@ -75,7 +75,7 @@ const getAndDisplayCountry = countries => {
  * @return bool if input = country.name
  */
 const checkCorrect = (country) => {
-    let input = document.getElementById("textInput").value.toLowerCase()
+    let input = document.getElementById("text").value.toLowerCase()
     country.name = country.name.toLowerCase()
     return (input === country.name)
 }
@@ -90,7 +90,24 @@ const displayCheckCorrect = (checkCorrect) => {
         document.getElementById('cross').textContent = 'check_circle'
         document.getElementById('cross').style.color = 'green'
         disableTextInput(true)
+        enableNewWordButton(true)
     }
 }
 
+/**
+ * function to disable text input
+ * default functionality disables text input
+ * @param {boolean} boolean if true, disables text input and if false enables text input
+ */
+
+const disableTextInput = (boolean= true) => {
+    document.getElementById('text').disabled = boolean
+}
+/**
+ * function to enable or disable the next button
+ * @param {boolean} enabled if true the next button is enabled otherwise disabled
+ */
+const enableNewWordButton = (enabled) => {
+    document.getElementById('nextButton').disabled = !enabled
+}
 
