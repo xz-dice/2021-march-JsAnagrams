@@ -67,7 +67,7 @@ const getAndDisplayCountry = countries => {
 /**
  * function to disable text input
  * default functionality disables text input
- * @param {boolean} if true, disables text input and if false enables text input
+ * @param {boolean} boolean if true, disables text input and if false enables text input
  */
 
 const disableTextInput = (boolean= true) => {
