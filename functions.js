@@ -65,6 +65,34 @@ const getAndDisplayCountry = countries => {
 }
 
 /**
+ * function to check user input against original country name, changing both to lower case
+ *
+ * @param {object} country containing name property
+ *
+ * @return bool if input = country.name
+ */
+const checkCorrect = (country) => {
+    let input = document.getElementById("text").value.toLowerCase()
+    let lowercaseCountry = country.name
+    lowercaseCountry = lowercaseCountry.toLowerCase()
+    return (input === lowercaseCountry)
+}
+
+/**
+ * function to change display from red cross to green tick if checkCorrect is true
+ *
+ * @param checkCorrect which if true will trigger function
+ */
+const displayCheckCorrect = (checkCorrect) => {
+    if (checkCorrect) {
+        document.getElementById('cross').textContent = 'check_circle'
+        document.getElementById('cross').style.color = 'green'
+        disableTextInput(true)
+        enableNewWordButton(true)
+    }
+}
+
+/**
  * function to disable text input
  * default functionality disables text input
  * @param {boolean} boolean if true, disables text input and if false enables text input
@@ -80,3 +108,4 @@ const disableTextInput = (boolean= true) => {
 const enableNewWordButton = (enabled) => {
     document.getElementById('nextButton').disabled = !enabled
 }
+

@@ -14,9 +14,14 @@ document.getElementById('startButton').addEventListener('click', () => {
     }
 })
 
+document.getElementById('text').addEventListener('keyup', e => {
+    displayCheckCorrect(checkCorrect(country))
+})
+
 document.getElementById('revealButton').addEventListener('click', (e) => {
     e.preventDefault()
     disableTextInput()
     enableNewWordButton(true)
     document.getElementById('anagram').textContent = country.name
 })
+
