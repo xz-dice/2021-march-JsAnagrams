@@ -72,6 +72,6 @@ const getAndDisplayCountry = countries => {
  */
 const newWord = (countries) => {
     enableNewWordButton(false)
-    document.querySelector('#textInput input').disabled = false
+    disableTextInput(false)
     return getAndDisplayCountry(countries)
 }
