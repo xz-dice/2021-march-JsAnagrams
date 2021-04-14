@@ -64,9 +64,6 @@ const getAndDisplayCountry = countries => {
     return countryObject
 }
 
-//Add an event listener to input box that listens for keyup
-//When keyup registered conditional statement triggered (if input = countryName.name then use innerHTML to show 'tick')
-
 /**
  * function to check user input against original country name, changing both to lower case
  *
@@ -76,8 +73,9 @@ const getAndDisplayCountry = countries => {
  */
 const checkCorrect = (country) => {
     let input = document.getElementById("text").value.toLowerCase()
-    country.name = country.name.toLowerCase()
-    return (input === country.name)
+    let lowercaseCountry = country.name
+    lowercaseCountry = lowercaseCountry.toLowerCase()
+    return (input === lowercaseCountry)
 }
 
 /**
