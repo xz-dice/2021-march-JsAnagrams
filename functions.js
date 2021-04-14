@@ -72,8 +72,12 @@ const getAndDisplayCountry = countries => {
 // we need to stop default functionality of the text input once reveal is selected
 document.getElementById('reveal').addEventListener('click', (e) => {
     e.preventDefault()
-    document.getElementById('text').disabled = true
+    disableTextInput()
 })
 
 // we need to stop default functionality when answer is correct
+
+const disableTextInput = () => {
+    document.getElementById('text').disabled = true
+}
 
