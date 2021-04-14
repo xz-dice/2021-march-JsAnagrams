@@ -89,6 +89,7 @@ const displayCheckCorrect = (checkCorrect) => {
     if (checkCorrect) {
         document.getElementById('cross').textContent = 'check_circle'
         document.getElementById('cross').style.color = 'green'
+        disableTextInput(true)
     }
 }
 
