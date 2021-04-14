@@ -72,6 +72,7 @@ const getAndDisplayCountry = countries => {
  * @returns {object} the next randomly selected country object with the anagram property attached to it
  */
 const newWord = (countries) => {
+    document.getElementById('text').value = ''
     enableNextButton(false)
     enableTextInput(true)
     return getAndDisplayCountry(countries)
