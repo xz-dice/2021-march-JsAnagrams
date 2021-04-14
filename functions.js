@@ -66,4 +66,5 @@ const getAndDisplayCountry = countries => {
 const newWord = (countries) => {
     getAndDisplayCountry(countries)
     document.getElementById('nextButton').disabled = true
+    document.querySelector('#textInput input').disabled = false
 }
