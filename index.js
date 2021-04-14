@@ -12,3 +12,5 @@ document.getElementById('startButton').addEventListener('click', () => {
         getAndDisplayCountry(countries)
     }
 })
+
+enableNewWordButton(true);

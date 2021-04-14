@@ -62,3 +62,11 @@ const getAndDisplayCountry = countries => {
     displayCountry(countryObject)
     return countryObject
 }
+
+/**
+ * function to enable or disable the next button
+ * @param {boolean} enabled if true the next button is enabled otherwise disabled
+ */
+const enableNewWordButton = (enabled) => {
+    document.getElementById('nextButton').disabled = !enabled
+}
