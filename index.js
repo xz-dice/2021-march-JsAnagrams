@@ -18,8 +18,8 @@ document.getElementById('startButton').addEventListener('click', () => {
 document.getElementById('text').addEventListener('keyup', e => {
     let correctWord = checkCorrect(country)
     displayCheckCorrect(correctWord)
-    if(correctWord) {
-        //incrementScore(score)
+    if (correctWord) {
+        score = incrementScore(score)
         displayUpdatedScore(score)
     }
 })
