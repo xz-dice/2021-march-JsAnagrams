@@ -1,4 +1,5 @@
 let countries = []
+let country
 
 fetch('countries.json')
     .then(countryData => countryData.json())
@@ -9,6 +10,11 @@ fetch('countries.json')
 document.getElementById('startButton').addEventListener('click', () => {
     if (countries.length) {
         startGame()
-        getAndDisplayCountry(countries)
+        country = getAndDisplayCountry(countries)
     }
+})
+
+document.getElementById('revealButton').addEventListener('click', () => {
+    document.getElementById('anagram').textContent = country.name
+    enableNewWordButton(true)
 })
