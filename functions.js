@@ -126,6 +126,11 @@ const enableNextButton = (enabled = true) => {
     document.getElementById('nextButton').disabled = !enabled
 }
 
+/**
+ * function to increment the player's score by 1
+ * @param {number} score the player's score
+ * @return {number} the player's incremented score
+ */
 const incrementScore = (score) => {
     score += 1
     return score
