@@ -84,7 +84,6 @@ const newWord = (countries) => {
  * function to check user input against original country name, changing both to lower case
  *
  * @param {object} country containing name property
- *
  * @return bool if input = country.name
  */
 const checkCorrect = (country) => {
@@ -111,6 +110,7 @@ const displayCheckCorrect = (checkCorrect) => {
 /**
  * function to disable text input,
  * default functionality enables text input
+ *
  * @param {boolean} boolean if true, enables text input and if false disables text input
  */
 const enableTextInput = (enabled= true) => {
@@ -120,6 +120,7 @@ const enableTextInput = (enabled= true) => {
 /**
  * function to enable or disable the next button,
  * default functionality enables the button
+ *
  * @param {boolean} enabled if true the next button is enabled otherwise disabled
  */
 const enableNextButton = (enabled = true) => {
@@ -128,6 +129,7 @@ const enableNextButton = (enabled = true) => {
 
 /**
  * function to increment the player's score by 1
+ *
  * @param {number} score the player's score
  * @return {number} the player's incremented score
  */
@@ -138,8 +140,22 @@ const incrementScore = (score) => {
 
 /**
  * function to display the updated score to the score element of the front end
+ *
  * @param {number} score the player's score
  */
 const displayUpdatedScore = (score) => {
     document.getElementById('score').textContent = score
 }
+
+/**
+ * function to initiate party mode!!!! :)
+ */
+const partyMode = () => {
+        document.getElementById('score').style.color = 'blue'
+        document.getElementById('score').style.fontSize = '2.5rem'
+        setTimeout(() => {
+            document.getElementById('score').style.color = 'black'
+            document.getElementById('score').style.fontSize = '1.5rem'
+    }, 3000)
+}
+

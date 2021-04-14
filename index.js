@@ -21,6 +21,9 @@ document.getElementById('text').addEventListener('keyup', e => {
     if (correctWord) {
         score = incrementScore(score)
         displayUpdatedScore(score)
+        if (score % 5 === 0 ) {
+            partyMode()
+        }
     }
 })
 
@@ -33,3 +36,4 @@ document.getElementById('revealButton').addEventListener('click', () => {
 document.getElementById('nextButton').addEventListener('click', () => {
     country = newWord(countries)
 })
+
