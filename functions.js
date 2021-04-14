@@ -159,3 +159,11 @@ const partyMode = () => {
     }, 3000)
 }
 
+// Create a function where the array no longer has any countries
+
+const emptyCountriesArray = () => {
+    if (score === countries.length) {
+        document.getElementById('mainScreen').style.display = 'hide'
+        document.getElementById('displayGameOver').style.display = 'block'
+    }
+}
