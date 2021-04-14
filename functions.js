@@ -65,4 +65,5 @@ const getAndDisplayCountry = countries => {
 
 const newWord = (countries) => {
     getAndDisplayCountry(countries)
+    document.getElementById('nextButton').disabled = true
 }
