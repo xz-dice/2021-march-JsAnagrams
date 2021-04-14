@@ -125,7 +125,3 @@ const enableTextInput = (enabled= true) => {
 const enableNextButton = (enabled = true) => {
     document.getElementById('nextButton').disabled = !enabled
 }
-
-const displayUpdatedScore = (score) => {
-    document.getElementById('score').textContent = score
-}
