@@ -37,3 +37,9 @@ document.getElementById('nextButton').addEventListener('click', () => {
     country = newWord(countries)
 })
 
+document.getElementById('nextButton').addEventListener('click', () => {
+    if (countries.length === 0) {
+        document.getElementById('mainScreen').style.display = 'hide'
+        document.getElementById('displayGameOver').style.display = 'block'
+    }
+})
