@@ -45,6 +45,10 @@ document.getElementById('nextButton').addEventListener('click', () => {
     }
 })
 
-document.getElementsByClassName('refresh').addEventListener('click', () => {
-    window.location.reload()
+let refreshButtons = document.querySelectorAll('.refresh')
+refreshButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        document.location.reload()
+    })
 })
+
