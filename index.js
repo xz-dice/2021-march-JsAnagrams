@@ -1,6 +1,6 @@
 let countries = []
 let country
-let score = 0
+let score = {score: 0}
 let timerObject = {}
 
 fetch('countries.json')
