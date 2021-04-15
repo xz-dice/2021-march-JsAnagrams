@@ -164,9 +164,10 @@ const partyMode = () => {
  *
  * @param {number} score the player's score
  */
+
 const displayGameOver = (score) => {
     document.getElementById('mainScreen').style.display = 'none'
-    document.getElementById('gaveOverScreen').style.display = 'block'
+    document.getElementById('gameOverScreen').style.display = 'block'
     document.getElementById('finalScore').textContent = score
 }
 
