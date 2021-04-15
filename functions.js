@@ -159,6 +159,17 @@ const partyMode = () => {
     }, 3000)
 }
 
+
+
+
+
+
+
+
+
+
+
+
 const startTimer = (timerObject) => {
     timerObject.time = 30
     timerObject.interval = setInterval(()=> {
