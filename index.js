@@ -44,3 +44,11 @@ document.getElementById('nextButton').addEventListener('click', () => {
         document.getElementById('text').focus()
     }
 })
+
+let refreshButtons = document.querySelectorAll('.refresh')
+refreshButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        document.location.reload()
+    })
+})
+
