@@ -174,7 +174,6 @@ const startTimer = (timerObject, score) => {
         if (timerObject.time <= 0) {
             displayGameOver(score, timerObject.interval)
         }
-        console.log(timerObject.time)
     }, 1000)
     return timerObject
 }
