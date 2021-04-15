@@ -14,7 +14,7 @@ document.getElementById('startButton').addEventListener('click', () => {
     if (countries.length) {
         startGame()
         country = getAndDisplayCountry(countries)
-
+        startTimer(timer)
     }
 })
 

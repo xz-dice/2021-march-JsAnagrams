@@ -163,6 +163,7 @@ const startTimer = () => {
     timer = 30
     setInterval(()=> {
         timer--
-
+        document.getElementById('timer').textContent = timer
     }, 1000)
+    return timer
 }
