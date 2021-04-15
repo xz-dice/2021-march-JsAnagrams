@@ -184,4 +184,3 @@ const displayGameOver = (score) => {
     document.getElementById('gameOverScreen').style.display = 'block'
     document.getElementById('finalScore').textContent = score
 }
-
