@@ -190,4 +190,3 @@ const displayGameOver = (score, interval) => {
     document.getElementById('finalScore').textContent = score.toString()
     clearInterval(interval)
 }
-
