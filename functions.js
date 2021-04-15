@@ -159,8 +159,14 @@ const partyMode = () => {
     }, 3000)
 }
 
-const displayGameOver = () => {
-    document.getElementById('mainScreen').style.display = none
-    document.getElementById('gaveOverScreen').style.display = block
+/**
+ * function to change from main screen to game over screen and display final score
+ *
+ * @param {number} score the player's score
+ */
+const displayGameOver = (score) => {
+    document.getElementById('mainScreen').style.display = 'none'
+    document.getElementById('gaveOverScreen').style.display = 'block'
+    document.getElementById('finalScore').textContent = score
 }
 
