@@ -160,11 +160,25 @@ const partyMode = () => {
 }
 
 /**
+ * function to start the timer
+ *
+ * @param {object} score the timer object that will have the timer and interval set
+ * @return {object} the timerObject object returned with the timer and the interval set
+ */
+const startTimer = (timerObject) => {
+    timerObject.time = 30
+    timerObject.interval = setInterval(()=> {
+        timerObject.time--
+        document.getElementById('timer').textContent = timerObject.time
+    }, 1000)
+    return timerObject
+}
+
+/**
  * function to change from main screen to game over screen and display final score
  *
  * @param {number} score the player's score
  */
-
 const displayGameOver = (score) => {
     document.getElementById('mainScreen').style.display = 'none'
     document.getElementById('gameOverScreen').style.display = 'block'
