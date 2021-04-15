@@ -30,8 +30,11 @@ document.getElementById('text').addEventListener('keyup', e => {
     }
 })
 
-
+document.getElementById('rescrumbleButton').addEventListener('click', () => {
+    country = formatCountry(country)
+    displayCountry(country)
     document.getElementById('text').focus()
+})
 
 document.getElementById('revealButton').addEventListener('click', () => {
     enableTextInput(false)

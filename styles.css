@@ -108,7 +108,7 @@ input {
     justify-content: space-between;
 }
 
-.buttonContainer > button {
+.buttonContainer > button, .anagramInput > button {
     font-size: 1.2rem;
     color: #fff;
     padding: 8px 16px;
