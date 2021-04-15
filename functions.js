@@ -4,6 +4,7 @@
 const startGame = () => {
     document.getElementById('instructionScreen').style.display = 'none'
     document.getElementById('mainScreen').style.display = 'block'
+    document.getElementById('text').focus()
 }
 
 /**
