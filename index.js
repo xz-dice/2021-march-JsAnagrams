@@ -23,7 +23,7 @@ document.getElementById('text').addEventListener('keyup', e => {
     if (correctWord) {
         score = incrementScore(score)
         displayUpdatedScore(score)
-        if (score % 5 === 0 ) {
+        if (score.score % 5 === 0 ) {
             partyMode()
         }
     }
