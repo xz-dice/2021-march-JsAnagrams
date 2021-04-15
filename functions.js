@@ -163,7 +163,7 @@ const partyMode = () => {
  * function to start the timer
  *
  * @param {object} score the timer object that will have the timer and interval set
- * @return {object} the timerobject returned with the timer and the interval set
+ * @return {object} the timerObject object returned with the timer and the interval set
  */
 const startTimer = (timerObject) => {
     timerObject.time = 30

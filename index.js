@@ -14,9 +14,6 @@ document.getElementById('startButton').addEventListener('click', () => {
         startGame()
         country = getAndDisplayCountry(countries)
         timerObject = startTimer(timerObject)
-        setInterval(()=>{
-            console.log(timerObject.time)
-        },2000)
     }
 })
 
