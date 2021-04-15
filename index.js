@@ -1,6 +1,8 @@
 let countries = []
 let country
 let score = 0
+let timer = 0
+let timerInterval
 
 // fetch('countries.json')
 //     .then(countryData => countryData.json())
