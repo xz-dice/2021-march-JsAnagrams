@@ -163,7 +163,7 @@ const partyMode = () => {
  * function to start the timer
  *
  * @param {object} timerObject the timer object that will have the timer and interval set
- * @param {number} score
+ * @param {number} score the player's score
  * @return {object} the timerObject object returned with the timer and the interval set
  */
 const startTimer = (timerObject, score) => {
