@@ -165,11 +165,14 @@ const partyMode = () => {
  * @param {object} score the timer object that will have the timer and interval set
  * @return {object} the timerObject object returned with the timer and the interval set
  */
-const startTimer = (timerObject) => {
+const startTimer = (timerObject, score) => {
     timerObject.time = 30
-    timerObject.interval = setInterval(()=> {
+    timerObject.interval = setInterval((score)=> {
         timerObject.time--
         document.getElementById('timer').textContent = timerObject.time
+        if (timerObject.time <= 0) {
+            displayGameOver(score)
+        }
     }, 1000)
     return timerObject
 }

@@ -1,7 +1,7 @@
 let countries = []
 let country
 let score = 0
-let timerObject ={}
+let timerObject = {}
 
 fetch('countries.json')
     .then(countryData => countryData.json())
@@ -13,7 +13,7 @@ document.getElementById('startButton').addEventListener('click', () => {
     if (countries.length) {
         startGame()
         country = getAndDisplayCountry(countries)
-        timerObject = startTimer(timerObject)
+        timerObject = startTimer(timerObject, score)
     }
 })
 
