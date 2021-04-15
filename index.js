@@ -38,6 +38,7 @@ document.getElementById('revealButton').addEventListener('click', () => {
 document.getElementById('nextButton').addEventListener('click', () => {
     if (countries.length === 0) {
         displayGameOver(score, timerObject.interval)
+    } else {
+        country = newWord(countries)
     }
-    country = newWord(countries)
 })
