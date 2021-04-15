@@ -159,17 +159,6 @@ const partyMode = () => {
     }, 3000)
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /**
  * function to start the timer
  *
@@ -184,3 +173,15 @@ const startTimer = (timerObject) => {
     }, 1000)
     return timerObject
 }
+
+/**
+ * function to change from main screen to game over screen and display final score
+ *
+ * @param {number} score the player's score
+ */
+const displayGameOver = (score) => {
+    document.getElementById('mainScreen').style.display = 'none'
+    document.getElementById('gameOverScreen').style.display = 'block'
+    document.getElementById('finalScore').textContent = score
+}
+
