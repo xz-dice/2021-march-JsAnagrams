@@ -1,7 +1,7 @@
 let countries = []
 let country
-let score = 0
-let timerObject ={}
+let score = {score: 0}
+let timerObject = {}
 
 fetch('countries.json')
     .then(countryData => countryData.json())
@@ -13,7 +13,7 @@ document.getElementById('startButton').addEventListener('click', () => {
     if (countries.length) {
         startGame()
         country = getAndDisplayCountry(countries)
-        timerObject = startTimer(timerObject)
+        timerObject = startTimer(timerObject, score)
     }
 })
 
@@ -23,7 +23,7 @@ document.getElementById('text').addEventListener('keyup', e => {
     if (correctWord) {
         score = incrementScore(score)
         displayUpdatedScore(score)
-        if (score % 5 === 0 ) {
+        if (score.score % 5 === 0 ) {
             partyMode()
         }
     }
@@ -37,7 +37,8 @@ document.getElementById('revealButton').addEventListener('click', () => {
 
 document.getElementById('nextButton').addEventListener('click', () => {
     if (countries.length === 0) {
-        displayGameOver(score)
+        displayGameOver(score, timerObject.interval)
+    } else {
+        country = newWord(countries)
     }
-    country = newWord(countries)
 })

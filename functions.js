@@ -130,21 +130,21 @@ const enableNextButton = (enabled = true) => {
 /**
  * function to increment the player's score by 1
  *
- * @param {number} score the player's score
- * @return {number} the player's incremented score
+ * @param {object} score the player's score
+ * @return {object} the player's incremented score
  */
 const incrementScore = (score) => {
-    score += 1
+    score.score += 1
     return score
 }
 
 /**
  * function to display the updated score to the score element of the front end
  *
- * @param {number} score the player's score
+ * @param {object} score the player's score
  */
 const displayUpdatedScore = (score) => {
-    document.getElementById('score').textContent = score
+    document.getElementById('score').textContent = score.score.toString()
 }
 
 /**
@@ -162,25 +162,31 @@ const partyMode = () => {
 /**
  * function to start the timer
  *
- * @param {object} score the timer object that will have the timer and interval set
+ * @param {object} timerObject the timer object that will have the timer and interval set
+ * @param {object} score the player's score
  * @return {object} the timerObject object returned with the timer and the interval set
  */
-const startTimer = (timerObject) => {
+const startTimer = (timerObject, score) => {
     timerObject.time = 30
     timerObject.interval = setInterval(()=> {
         timerObject.time--
         document.getElementById('timer').textContent = timerObject.time
+        if (timerObject.time <= 0) {
+            displayGameOver(score, timerObject.interval)
+        }
     }, 1000)
     return timerObject
 }
 
 /**
- * function to change from main screen to game over screen and display final score
- *
- * @param {number} score the player's score
+ * function to change from main screen to game over screen and display final score,
+ * the timer object's interval is also cleared
+ * @param {object} score the player's score
+ * @param interval the timer object's interval property
  */
-const displayGameOver = (score) => {
+const displayGameOver = (score, interval) => {
     document.getElementById('mainScreen').style.display = 'none'
     document.getElementById('gameOverScreen').style.display = 'block'
-    document.getElementById('finalScore').textContent = score
+    document.getElementById('finalScore').textContent = score.score.toString()
+    clearInterval(interval)
 }
