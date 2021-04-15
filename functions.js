@@ -162,17 +162,19 @@ const partyMode = () => {
 /**
  * function to start the timer
  *
- * @param {object} score the timer object that will have the timer and interval set
+ * @param {object} timerObject the timer object that will have the timer and interval set
+ * @param {number} score
  * @return {object} the timerObject object returned with the timer and the interval set
  */
 const startTimer = (timerObject, score) => {
     timerObject.time = 30
-    timerObject.interval = setInterval((score)=> {
+    timerObject.interval = setInterval(()=> {
         timerObject.time--
         document.getElementById('timer').textContent = timerObject.time
         if (timerObject.time <= 0) {
             displayGameOver(score, timerObject.interval)
         }
+        console.log(timerObject.time)
     }, 1000)
     return timerObject
 }
@@ -182,10 +184,10 @@ const startTimer = (timerObject, score) => {
  *
  * @param {number} score the player's score
  */
-const displayGameOver = (score, timerObject) => {
+const displayGameOver = (score, interval) => {
     document.getElementById('mainScreen').style.display = 'none'
     document.getElementById('gameOverScreen').style.display = 'block'
     document.getElementById('finalScore').textContent = score.toString()
-    clearInterval(timerObject.interval)
+    clearInterval(interval)
 }
 
