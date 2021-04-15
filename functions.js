@@ -19,7 +19,7 @@ const getRandomCountry = (countries) => {
 }
 
 /**
- * function to add a new property to a country object containing a lowercase anagram of the country name
+ * function to add a new property to a country object containing a lowercase anagram of the country name that is never the same as the name
  * @param country object containing a country name & country code
  * @returns {object} a country object containing a lowercase anagram of the country name
  */
