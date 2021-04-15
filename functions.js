@@ -159,11 +159,11 @@ const partyMode = () => {
     }, 3000)
 }
 
-const startTimer = () => {
-    timer = 30
-    setInterval(()=> {
-        timer--
-        document.getElementById('timer').textContent = timer
+const startTimer = (timerObject) => {
+    timerObject.time = 30
+    timerObject.interval = setInterval(()=> {
+        timerObject.time--
+        document.getElementById('timer').textContent = timerObject.time
     }, 1000)
-    return timer
+    return timerObject
 }
