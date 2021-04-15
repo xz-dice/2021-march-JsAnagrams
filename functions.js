@@ -159,3 +159,8 @@ const partyMode = () => {
     }, 3000)
 }
 
+const displayGameOver = () => {
+    document.getElementById('mainScreen').style.display = none
+    document.getElementById('gaveOverScreen').style.display = block
+}
+
