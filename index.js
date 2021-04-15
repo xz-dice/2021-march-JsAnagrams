@@ -44,3 +44,7 @@ document.getElementById('nextButton').addEventListener('click', () => {
         document.getElementById('text').focus()
     }
 })
+
+document.getElementById('rescrumbleButton').addEventListener('click', () => {
+    document.getElementById('text').focus()
+})
