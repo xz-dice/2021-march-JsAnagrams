@@ -30,6 +30,9 @@ document.getElementById('text').addEventListener('keyup', e => {
     }
 })
 
+
+    document.getElementById('text').focus()
+
 document.getElementById('revealButton').addEventListener('click', () => {
     enableTextInput(false)
     enableNextButton(true)
@@ -43,8 +46,4 @@ document.getElementById('nextButton').addEventListener('click', () => {
         country = newWord(countries)
         document.getElementById('text').focus()
     }
-})
-
-document.getElementById('rescrumbleButton').addEventListener('click', () => {
-    document.getElementById('text').focus()
 })
