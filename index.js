@@ -26,7 +26,6 @@ document.getElementById('text').addEventListener('keyup', e => {
         if (score.score % 5 === 0 ) {
             partyMode()
         }
-        document.activeElement.blur()
         document.getElementById('nextButton').focus()
     }
 })
@@ -42,5 +41,6 @@ document.getElementById('nextButton').addEventListener('click', () => {
         displayGameOver(score, timerObject.interval)
     } else {
         country = newWord(countries)
+        document.getElementById('text').focus()
     }
 })
