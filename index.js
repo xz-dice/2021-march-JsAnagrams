@@ -44,3 +44,7 @@ document.getElementById('nextButton').addEventListener('click', () => {
         document.getElementById('text').focus()
     }
 })
+
+document.getElementsByClassName('refresh').addEventListener('click', () => {
+    window.location.reload()
+})
