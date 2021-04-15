@@ -22,20 +22,21 @@
                     <p>Correctly guess as many anagrams of countries of the world as possible. </p>
                     <ul>
                         <li>On the following page, an anagram will appear and you must enter your answer in the text field below. </li>
-                        <li>To help you out, the two letter country code will be displayed below. </li>
-                        <li>If you want to reveal the answer, then you can click the REVEAL button which will reveal the answer and then you can click NEXT to move onto the next anagram.  </li>
+                        <li>To help you out, the two letter country code will be displayed below the text field.</li>
+                        <li>To reveal the answer, click the REVEAL button which will reveal the answer. You can then click NEXT to move onto the next anagram.  </li>
                         <li>Once you feel ready, press START and you will be taken to the following screen where the game will start immediately. </li>
                     </ul>
                     </div>
                         <img src="assets/globe.png" alt="globe" />
                 </div>
                 <div class="startButtonContainer">
-                     <button id="startButton">Start Game</button>
+                     <button id="startButton" class="startRestartButton">Start Game</button>
                 </div>
             </section>
 
             <section id="mainScreen">
                 <div class="gameNav">
+                    <h3>Timer: <span id="timer">30</span>s</h3>
                     <h3>Score: <span id="score">0</span></h3>
                 </div>
                 <div class="mainGame">
@@ -57,7 +58,12 @@
                         </button>
                     </div>
                 </div>
-
+            </section>
+            <section id="gameOverScreen">
+                <div class="gameOverContainer">
+                    <h1>GAME OVER!</h1>
+                    <h3>Score: <span id="finalScore">0</span></h3>
+                </div>
             </section>
         </main>
     </body>
