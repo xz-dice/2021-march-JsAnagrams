@@ -179,9 +179,10 @@ const startTimer = (timerObject, score) => {
 }
 
 /**
- * function to change from main screen to game over screen and display final score
- *
+ * function to change from main screen to game over screen and display final score,
+ * the timer object's interval is also cleared
  * @param {number} score the player's score
+ * @param {interval} interval the timer object's interval property
  */
 const displayGameOver = (score, interval) => {
     document.getElementById('mainScreen').style.display = 'none'
