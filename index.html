@@ -19,12 +19,13 @@
                 <div class="instructionMain">
                     <div class="writtenInstructions">
                     <h3>Instructions</h3>
-                    <p>Correctly guess as many anagrams of countries of the world as possible. </p>
+                    <p>You have 30 seconds to solve as many placename anagrams as possible. </p>
                     <ul>
-                        <li>On the following page, an anagram will appear and you must enter your answer in the text field below. </li>
-                        <li>To help you out, the two letter country code will be displayed below the text field.</li>
-                        <li>To reveal the answer, click the REVEAL button which will reveal the answer. You can then click NEXT to move onto the next anagram.  </li>
-                        <li>Once you feel ready, press START and you will be taken to the following screen where the game will start immediately. </li>
+                        <li>An anagram will appear, enter your answer in the text field. </li>
+                        <li>The two letter country code will be displayed below the text field.</li>
+                        <li>Click REVEAL to show the answer. Click NEXT to move onto the next anagram.  </li>
+                        <li>Click RESCRUMBLE to rearrange the anagram.</li>
+                        <li>Click RESTART SCRUMBLE to try again.</li>
                     </ul>
                     </div>
                         <img src="assets/globe.png" alt="globe" />
@@ -69,7 +70,7 @@
                 <div class="gameOverContainer">
                     <h1>GAME OVER!</h1>
                     <h3>Score: <span id="finalScore">0</span></h3>
-                    <button class="startRestartButton refresh">Restart Scrumble</button>
+                    <button id="restartButton" class="startRestartButton refresh">Restart Scrumble</button>
                 </div>
             </section>
         </main>

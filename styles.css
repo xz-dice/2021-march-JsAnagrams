@@ -95,6 +95,10 @@ input {
     height: 40px;
 }
 
+#textInput {
+    padding: 20px;
+}
+
 #cross {
     color: red;
     font-size: 30px;
@@ -117,11 +121,18 @@ input {
     border-radius: 10px;
 }
 
-.buttonContainer > button:disabled {
+.buttonContainer > #nextButton:disabled {
     background-color: #d3d3d3;
     cursor: auto;
 }
 
+.refresh {
+    background-color: #ff0000;
+}
+
+#nextButton {
+    background-color: #7ABC31;
+}
 /*Game Over Screen*/
 #gameOverScreen {
     display: none;
