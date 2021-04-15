@@ -171,7 +171,7 @@ const startTimer = (timerObject, score) => {
         timerObject.time--
         document.getElementById('timer').textContent = timerObject.time
         if (timerObject.time <= 0) {
-            displayGameOver(score)
+            displayGameOver(score, timerObject.interval)
         }
     }, 1000)
     return timerObject
@@ -182,9 +182,10 @@ const startTimer = (timerObject, score) => {
  *
  * @param {number} score the player's score
  */
-const displayGameOver = (score) => {
+const displayGameOver = (score, timerObject) => {
     document.getElementById('mainScreen').style.display = 'none'
     document.getElementById('gameOverScreen').style.display = 'block'
-    document.getElementById('finalScore').textContent = score
+    document.getElementById('finalScore').textContent = score.toString()
+    clearInterval(timerObject.interval)
 }
 
